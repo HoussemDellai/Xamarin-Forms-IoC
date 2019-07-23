@@ -10,15 +10,26 @@
     <ContentPage.BindingContext>
         <viewmodels:DetailsViewModel />
     </ContentPage.BindingContext>
-    
+
     <ContentPage.Content>
         <StackLayout>
-            <Label FontSize="30" Text="Name: "/>
-            <Label FontSize="30" Text="{Binding Product.Name}" />
-            <Label FontSize="30" Text="Cost :" />
-            <Label FontSize="30" Text="{Binding Product.Cost}" />
-            <Label FontSize="30" Text="Description :" />
-            <Label FontSize="30" Text="{Binding Product.Description}" />
+            <Label FontSize="30"
+                   Text="Name: " />
+            <Entry FontSize="30"
+                   Text="{Binding Product.Name}" />
+            <Label FontSize="30"
+                   Text="Cost :" />
+            <Entry FontSize="30"
+                   Text="{Binding Product.Cost}" />
+            <Label FontSize="30"
+                   Text="Description :" />
+            <Entry FontSize="30"
+                   Text="{Binding Product.Description}" />
+            <Button Text="Validate"
+                    Command="{Binding ValidateCommand}"/>
+            <Label Text="{Binding Error}"
+                   TextColor="OrangeRed"
+                   FontSize="20"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

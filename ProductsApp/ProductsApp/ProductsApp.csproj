@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.4.0" />
     <PackageReference Include="Unity" Version="5.11.1" />
     <PackageReference Include="Unity.ServiceLocation" Version="5.11.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.0.0.425677" />
