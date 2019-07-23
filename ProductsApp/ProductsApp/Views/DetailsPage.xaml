@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:ProductsApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="ProductsApp.Views.DetailsPage">
+
+    <ContentPage.BindingContext>
+        <viewmodels:DetailsViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label FontSize="30" Text="Name: "/>
+            <Label FontSize="30" Text="{Binding Product.Name}" />
+            <Label FontSize="30" Text="Cost :" />
+            <Label FontSize="30" Text="{Binding Product.Cost}" />
+            <Label FontSize="30" Text="Description :" />
+            <Label FontSize="30" Text="{Binding Product.Description}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

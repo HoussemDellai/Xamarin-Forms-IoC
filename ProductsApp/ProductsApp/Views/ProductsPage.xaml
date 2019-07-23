@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:ProductsApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="ProductsApp.ProductsPage"
+             BindingContext="{Binding ProductsViewModel, Source={StaticResource Locator}}">
+
+    <!--<ContentPage.BindingContext>
+        <viewmodels:ProductsViewModel />
+    </ContentPage.BindingContext>-->
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Products}"
+                      HasUnevenRows="True"
+                      ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="20,20,20,20">
+                                <Label Text="{Binding Name}"
+                                       FontSize="30"
+                                       TextColor="DodgerBlue" />
+                                <Label Text="{Binding Cost, StringFormat='{0} $'}"
+                                       HorizontalOptions="End"
+                                       FontSize="22"
+                                       TextColor="Chocolate" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
