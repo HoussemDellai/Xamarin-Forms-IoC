@@ -21,7 +21,7 @@ namespace ProductsApp.Services
                 new Product { Name = "XBOX-8", Cost = 4008, Description = "Gaming console 8" },
                 new Product { Name = "XBOX-9", Cost = 4009, Description = "Gaming console 9" },
                 new Product { Name = "XBOX-10", Cost = 4010, Description = "Gaming console 10" },
-                new Product { Name = "XBOX-11", Cost = 4011, Description = "Gaming console 11" }
+                new Product { Name = "XBOX-11", Cost = 4011, Description = "Gaming console 11" },
             };
         }
     }
